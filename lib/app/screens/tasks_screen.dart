@@ -3,6 +3,8 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:task_mangement/app/models/tasks.dart';
 
 class TasksScreen extends StatefulWidget {
+  const TasksScreen({super.key});
+
   @override
   _TasksScreenState createState() => _TasksScreenState();
 }
@@ -221,8 +223,8 @@ class _TasksScreenState extends State<TasksScreen> {
       floatingActionButton: FloatingActionButton(
         onPressed: _deleteAllTasks,
         backgroundColor: Colors.deepOrange,
-        child: const Icon(Icons.delete_forever),
         tooltip: 'Delete All Tasks',
+        child: const Icon(Icons.delete_forever),
       ),
     );
   }
