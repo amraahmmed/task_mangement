@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:task_mangement/app/screens/tasks_screen.dart';
 import 'package:task_mangement/app/widgets/my_container.dart';
 import 'package:task_mangement/app/widgets/my_sized_box.dart';
 import 'package:task_mangement/app/widgets/my_text_form.dart';
@@ -74,6 +75,12 @@ class LoginScreen extends StatelessWidget {
                       return const LoginScreen();
                     }));
                   },
+                    child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return   TasksScreen();
+                    }));
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromARGB(255, 255, 77, 12),
                     fixedSize: const Size(311, 48),
@@ -85,6 +92,7 @@ class LoginScreen extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                     ),
                   ),
+                ),
                 ),
               ),
               mySizedBox(height: 24),
@@ -140,3 +148,26 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
+
+
+
+
+
+    // child: ElevatedButton(
+    //               onPressed: () {
+    //                 Navigator.push(context, MaterialPageRoute(builder: (context) {
+    //                   return  TasksScreen();
+    //                 }));
+    //               },
+    //               style: ElevatedButton.styleFrom(
+    //                 backgroundColor: const Color.fromARGB(255, 255, 77, 12),
+    //                 fixedSize: const Size(311, 48),
+    //               ),
+    //               child: const Text(
+    //                 'Login',
+    //                 style: TextStyle(
+    //                   color: Color.fromARGB(255, 255, 255, 255),
+    //                   fontWeight: FontWeight.w600,
+    //                 ),
+    //               ),
+    //             ),
