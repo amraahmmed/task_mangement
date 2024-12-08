@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_mangement/app/screens/login_screen.dart';
-import 'package:task_mangement/app/screens/signup_screen.dart';
+import 'package:task_mangement/app/screens/signup_screen.dart'; // Ensure this path is correct
 import '../widgets/my_sized_box.dart';
 
 class SecondWelcomeScreen extends StatelessWidget {
@@ -71,7 +71,7 @@ class SecondWelcomeScreen extends StatelessWidget {
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return const SignupScreen();
+                    return const SignupScreen(); // Correct usage
                   }));
                 },
                 style: ElevatedButton.styleFrom(

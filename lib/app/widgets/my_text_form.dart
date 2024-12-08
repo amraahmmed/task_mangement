@@ -5,7 +5,7 @@ Widget myTextForm(
     String text = "",
     Color? color,
     bool obscureText = false,
-    bool icon = false}) {
+    bool icon = false, required TextEditingController controller}) {
   return TextFormField(
     style: TextStyle(color: color, fontSize: 22),
     obscureText: obscureText,
