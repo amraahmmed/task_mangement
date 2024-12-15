@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class LoginProvider with ChangeNotifier {
-  // List to hold registered users (simulating a database)
   final List<Map<String, String>> _users = [
     {'email': 'amr@gmail.com', 'password': '123456', 'name': 'Amr'},
     {'email': 'alkourdi@gmail.com', 'password': '123456', 'name': 'Alkourdi'},
