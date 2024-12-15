@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:task_mangement/app/widgets/my_container.dart';
 import 'package:task_mangement/app/widgets/my_sized_box.dart';
 import 'package:task_mangement/login_provider.dart'; // Import the LoginProvider
-import'package:task_mangement/app/screens/login_screen.dart';
+import 'package:task_mangement/app/screens/login_screen.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -43,7 +43,9 @@ class _SignupScreenState extends State<SignupScreen> {
     // Navigate to the WelcomeScreen after a successful signup
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => const LoginScreen()), // Redirect to WelcomeScreen
+      MaterialPageRoute(
+          builder: (context) =>
+              const LoginScreen()), // Redirect to WelcomeScreen
     );
   }
 
@@ -157,7 +159,11 @@ class _SignupScreenState extends State<SignupScreen> {
                       ),
                       TextButton(
                         onPressed: () {
-                          Navigator.pop(context); // Go back to the login screen
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const LoginScreen()),
+                          );
                         },
                         child: const Text(
                           'Sign in',
