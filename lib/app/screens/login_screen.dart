@@ -20,30 +20,30 @@ class _LoginScreenState extends State<LoginScreen> {
     String email = _emailController.text.trim();
     String password = _passwordController.text.trim();
 
-    // Check if the fields are empty
+    // Check the fields
     if (email.isEmpty || password.isEmpty) {
       _showDialog('Error', 'All fields are required.');
       return;
     }
 
-    // Call the provider's login method
+    // provider's login
     bool isValidUser = Provider.of<LoginProvider>(context, listen: false)
         .loginUser(email, password);
 
-    // If user is not valid, show an error dialog
+    // user is not valid
     if (!isValidUser) {
       _showDialog('Error', 'Invalid email or password.');
       return;
     }
 
-    // If valid, navigate to the tasks screen
+    // valid
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => const TasksScreen()),
     );
   }
 
-  // Function to show dialog
+  // show dialog
   void _showDialog(String title, String message) {
     showDialog(
       context: context,

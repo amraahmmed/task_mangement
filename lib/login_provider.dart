@@ -7,16 +7,16 @@ class LoginProvider with ChangeNotifier {
     {'email': 'mohamed@gmail.com', 'password': '123456', 'name': 'Mohamed'},
   ];
 
-  // Getter to access users
+  // Getter
   List<Map<String, String>> get users => _users;
 
-  // Method to add a new user
+  // add a new user
   void addUser(String email, String password, String name) {
     _users.add({'email': email, 'password': password, 'name': name});
-    notifyListeners(); // Notify listeners that the state has changed
+    notifyListeners(); // Notify changed
   }
 
-  // Method to login a user
+  // login a user
   bool loginUser(String email, String password) {
     final user = _users.firstWhere(
       (user) => user['email'] == email && user['password'] == password,
